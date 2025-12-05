@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graftmotion | Cinematic Visuals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#FACC15',
+                            500: '#EAB308',
+                            600: '#CA8A04',
+                        }
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(234, 179, 8, 0.3)',
+                        'glow-hover': '0 0 25px rgba(234, 179, 8, 0.6)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
+        .gold-text {
+            background: linear-gradient(to right, #FACC15, #EAB308, #FACC15);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(234, 179, 8, 0.3);
+        }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0;
+            background-color: #EAB308; transition: width 0.3s; box-shadow: 0 0 10px #EAB308;
+        }
+        .nav-link:hover::after { width: 100%; }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #EAB308; }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter hover:text-gold-400 transition">
+                GRAFT<span class="text-gold-500">MOTION</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#services" class="nav-link hover:text-white transition">Services</a>
+                <a href="#work" class="nav-link hover:text-white transition">Work</a>
+                <a href="#process" class="nav-link hover:text-white transition">Process</a>
+                <a href="#contact" class="nav-link hover:text-white transition">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gold-500 text-xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center text-center px-6 pt-20 overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold-500/10 rounded-full blur-[120px]"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <div class="inline-block px-4 py-1 mb-6 border border-gold-500/30 rounded-full bg-gold-500/5 backdrop-blur-sm text-gold-400 text-xs font-bold tracking-widest uppercase">
+                Creative Studio • Available Worldwide
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                We turn ideas into <br>
+                <span class="gold-text">cinematic visuals.</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                Graftmotion crafts sharp edits, bold animations, and scroll-stopping visuals for brands, creators, and businesses that actually care about quality.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="px-8 py-4 bg-gold-500 text-black font-bold text-sm uppercase tracking-wide rounded hover:bg-gold-400 hover:shadow-glow transition-all transform hover:-translate-y-1">
+                    Start a Project
+                </a>
+                <a href="#work" class="px-8 py-4 border border-white/20 text-white font-bold text-sm uppercase tracking-wide rounded hover:border-gold-500 hover:text-gold-500 transition-all">
+                    View Work
+                </a>
+            </div>
+            
+            <div class="mt-16 flex justify-center gap-8 text-gray-500 text-xs font-mono uppercase tracking-widest">
+                <span><i class="fas fa-check text-gold-500 mr-2"></i>4K Ready</span>
+                <span><i class="fas fa-bolt text-gold-500 mr-2"></i>Fast Delivery</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-neutral-900/30 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">What we do</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group p-8 border border-white/10 bg-white/5 hover:border-gold-500/50 hover:bg-white/10 transition-all duration-300 rounded-lg relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gold-500 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                    <i class="fas fa-film text-4xl text-gold-500 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold mb-3 text-white">Video Editing</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Fast-paced cuts, clean pacing, story structure and sound design for content that actually keeps people watching.</p>
+                    <ul class="text-xs text-gray-500 space-y-2 font-mono">
+                        <li>• Reels / Shorts / TikToks</li>
+                        <li>• YouTube videos & vlogs</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="group p-8 border border-white/10 bg-white/5 hover:border-gold-500/50 hover:bg-white/10 transition-all duration-300 rounded-lg relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gold-500 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500 delay-75"></div>
+                    <i class="fas fa-layer-group text-4xl text-gold-500 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold mb-3 text-white">Motion Graphics</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Animated titles, lower-thirds, transitions and custom motion assets to make your visual identity unique.</p>
+                    <ul class="text-xs text-gray-500 space-y-2 font-mono">
+                        <li>• Logo animations</li>
+                        <li>• Title packs</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group p-8 border border-white/10 bg-white/5 hover:border-gold-500/50 hover:bg-white/10 transition-all duration-300 rounded-lg relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gold-500 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500 delay-150"></div>
+                    <i class="fas fa-paint-brush text-4xl text-gold-500 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold mb-3 text-white">Brand Visuals</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">A full visual system for your brand: cover designs, layout systems and packs for posts.</p>
+                    <ul class="text-xs text-gray-500 space-y-2 font-mono">
+                        <li>• Social media kits</li>
+                        <li>• Ad creatives</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section (Dynamic Grid) -->
+    <section id="work" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-2">Selected Work</h2>
+                    <p class="text-gray-400 text-sm">Cinematic visuals crafted for clients worldwide.</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                   <span class="inline-block w-12 h-1 bg-gold-500"></span>
+                </div>
+            </div>
+
+            <!-- This grid fills automatically from Firebase -->
+            <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Loading State -->
+                <div class="col-span-full text-center py-20 text-gray-500 animate-pulse">
+                    Loading projects from database...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="py-24 bg-neutral-900/30 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-16 text-center">How projects run</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500 font-bold text-xl mb-6 shadow-glow">01</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Brief</h4>
+                    <p class="text-gray-500 text-sm">You send us your raw footage, references and goals.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500 font-bold text-xl mb-6 shadow-glow">02</div>
+                    <h4 class="text-lg font-bold text-white mb-2">First Cut</h4>
+                    <p class="text-gray-500 text-sm">We deliver a first edit with motion, music and pacing.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500 font-bold text-xl mb-6 shadow-glow">03</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Refine</h4>
+                    <p class="text-gray-500 text-sm">Color, sound, effects and details are polished.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500 font-bold text-xl mb-6 shadow-glow">04</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Delivery</h4>
+                    <p class="text-gray-500 text-sm">Final exports in all required formats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="border border-white/10 bg-white/5 p-8 md:p-12 rounded-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gold-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Let's talk</h2>
+                        <p class="text-gray-400 mb-8">Drop a quick brief and we’ll reply with ideas, timeline and pricing.</p>
+                        
+                        <div class="space-y-4">
+                            <a href="https://instagram.com/graftmotion.vfx" target="_blank" class="flex items-center space-x-4 text-gray-300 hover:text-gold-500 transition group">
+                                <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center group-hover:bg-gold-500/20">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </div>
+                                <span>@graftmotion.vfx</span>
+                            </a>
+                            <a href="mailto:graftmotionfx@gmail.com" class="flex items-center space-x-4 text-gray-300 hover:text-gold-500 transition group">
+                                <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center group-hover:bg-gold-500/20">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <span>graftmotionfx@gmail.com</span>
+                            </a>
+                            <a href="https://wa.me/212775095174" class="flex items-center space-x-4 text-gray-300 hover:text-gold-500 transition group">
+                                <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center group-hover:bg-gold-500/20">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </div>
+                                <span>+212 775 095 174</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Name" class="w-full bg-black/50 border border-white/10 rounded p-4 text-white placeholder-gray-600 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500 transition">
+                        <input type="email" placeholder="Your Email" class="w-full bg-black/50 border border-white/10 rounded p-4 text-white placeholder-gray-600 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500 transition">
+                        <select class="w-full bg-black/50 border border-white/10 rounded p-4 text-white placeholder-gray-600 focus:border-gold-500 focus:outline-none">
+                            <option value="">Project Type</option>
+                            <option value="editing">Video Editing</option>
+                            <option value="motion">Motion Graphics</option>
+                            <option value="brand">Brand Visuals</option>
+                        </select>
+                        <textarea rows="4" placeholder="Tell us about the project..." class="w-full bg-black/50 border border-white/10 rounded p-4 text-white placeholder-gray-600 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500 transition"></textarea>
+                        <button class="w-full bg-gold-500 text-black font-bold uppercase tracking-wide py-4 rounded hover:bg-gold-400 hover:shadow-glow transition-all">Send Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-white/5 text-center text-gray-600 text-xs">
+        &copy; 2024 Graftmotion Studio. All rights reserved.
+    </footer>
+
+    <!-- FIREBASE SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        // --- PASTE YOUR FIREBASE CONFIG HERE ---
+        const firebaseConfig = {
+  apiKey: "AIzaSyDqNNrcbN4CVEVe0QXLNzjPAzcsE4g2_GQ",
+  authDomain: "graftmotion-25097.firebaseapp.com",
+  projectId: "graftmotion-25097",
+  storageBucket: "graftmotion-25097.firebasestorage.app",
+  messagingSenderId: "690371173072",
+  appId: "1:690371173072:web:e517b8e4af3f56ddbfdcd5",
+  measurementId: "G-87XPPBH2HB"
+};
+        // ---------------------------------------
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Fetch Projects
+        async function loadProjects() {
+            const grid = document.getElementById('project-grid');
+            
+            try {
+                // Order by 'createdAt' descending so newest is first
+                const q = query(collection(db, "projects"), orderBy("createdAt", "desc"));
+                const querySnapshot = await getDocs(q);
+                
+                if(querySnapshot.empty) {
+                    grid.innerHTML = '<div class="col-span-full text-center text-gray-500">No projects uploaded yet.</div>';
+                    return;
+                }
+
+                grid.innerHTML = ''; // Clear loading
+
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    let mediaContent = '';
+
+                    if (data.type === 'youtube') {
+                        // Convert standard YT link to embed
+                        const videoId = data.url.split('v=')[1]?.split('&')[0] || data.url.split('/').pop();
+                        mediaContent = `
+                            <iframe class="w-full h-full object-cover" 
+                                src="https://www.youtube.com/embed/${videoId}?controls=1" 
+                                frameborder="0" allowfullscreen>
+                            </iframe>`;
+                    } else if (data.type === 'video') {
+                        mediaContent = `
+                            <video class="w-full h-full object-cover" controls>
+                                <source src="${data.url}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>`;
+                    }
+
+                    const card = `
+                        <div class="group relative aspect-video bg-black border border-white/10 rounded-lg overflow-hidden shadow-lg hover:border-gold-500/50 transition-all duration-300">
+                            ${mediaContent}
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <h3 class="text-white font-bold text-lg">${data.title}</h3>
+                                    <p class="text-gold-500 text-xs uppercase tracking-wider">${data.description || ''}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    grid.innerHTML += card;
+                });
+
+            } catch (error) {
+                console.error("Error loading projects:", error);
+                grid.innerHTML = '<div class="col-span-full text-center text-red-500">Failed to load projects. Check console.</div>';
+            }
+        }
+
+        loadProjects();
+    </script>
+</body>
+</html>
+
